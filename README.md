@@ -11,3 +11,4 @@ A simple React app to help you organize your job applications.
 3. Firebase Realtime Database, Authentification, and Hosting
 4. Axios for reaching out to the web
 5. Redux Thunk for executing asychronous code
+6. Bootstrap 4 and CSS Module for styling
