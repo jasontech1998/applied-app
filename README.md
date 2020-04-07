@@ -4,6 +4,14 @@
 
 A simple React app to help you organize your job applications.
 
+## How it Works
+
+1. Sign up with an email address to create your account. 
+2. Enter in job application information such as 'Company Name', 'Job Title', etc.
+3. View submitted job applications in Applications page.
+4. Update any pending applications in Applications page if the employer responds.
+
+
 ## Tools Used
 
 1. Redux to avoid prop drilling and make state management easier
