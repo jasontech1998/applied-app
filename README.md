@@ -2,12 +2,12 @@
 
 ## Applied App
 
-A simple React app to help you organize your job applications.
+A simple React app to keep your job applications organized.
 
 ## How it Works
 
 1. Sign up with an email address to create your account. 
-2. Enter in job application information such as 'Company Name', 'Job Title', etc.
+2. Enter job application information such as 'Company Name', 'Job Title', etc.
 3. View submitted job applications in Applications page.
 4. Update any pending applications in Applications page if the employer responds.
 
