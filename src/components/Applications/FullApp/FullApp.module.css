@@ -1,0 +1,6 @@
+.FullApp {
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 30px;
+  min-width: 300px;
+}

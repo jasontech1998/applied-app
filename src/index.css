@@ -1,0 +1,15 @@
+html {
+  height: 100%;
+}
+
+body, 
+#root, 
+#root>div {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #e3f6f5;
+}
+

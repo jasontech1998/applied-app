@@ -1,0 +1,29 @@
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #005082, #ccc);
+}
+
+.Header {
+  background: #e3f6f5;
+  font-family: 'Cinzel', serif;
+  padding-top: 30px;
+  
+}
+
+h1 {
+  font-size: 5.0rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #f0f0f0;
+  -webkit-text-fill-color: #005082; /* Will override color (regardless of order) */
+  -webkit-text-stroke-color: #005082;
+
+}
+
+.Header p {
+  color: #005082;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+}

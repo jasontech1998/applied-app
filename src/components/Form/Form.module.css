@@ -1,0 +1,7 @@
+.Form {
+  box-sizing: border-box;
+  padding: 30px;
+  margin: 15px;
+  background: rgba(255,255,255,.6);
+  box-shadow: 0 5px 15px rgba(21, 199, 223, 0.5);
+}
