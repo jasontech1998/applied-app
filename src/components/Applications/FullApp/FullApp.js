@@ -33,7 +33,8 @@ class FullApp extends Component {
     let chosenApp = this.props.applications[appIndex];
     let isInfo = chosenApp.application.info !== '';
     let isURL = chosenApp.application.url !== '';
-    let fixedDate = chosenApp.application.date.toString().slice(0,10);
+    let tempDate = chosenApp.application.date.toString().slice(0,10);
+    let fixedDate = tempDate.substr(5,6) + '-' + tempDate.substr(0,4);
     let response = chosenApp.application.responseData;
     if (response === undefined) {
       response = 'No Response'

@@ -44,7 +44,8 @@ class Applications extends Component {
     let displayApps = (
       <Aux>
         {this.props.applications.map((app, index) => {
-          let fixedDate = app.application.date.toString().slice(0,10);
+          let tempDate = app.application.date.toString().slice(0,10);
+          let fixedDate = tempDate.substr(5,6) + '-' + tempDate.substr(0,4);
           let isUrl =  app.application.url !== ''; 
           return (
               <tr key={app + index}>

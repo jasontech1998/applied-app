@@ -7,7 +7,7 @@ class Auth extends Component {
   state = {
     email: '',
     password: '',
-    isSignUp: true
+    isSignUp: false
   }
 
   onChange = (event) => {
@@ -63,8 +63,12 @@ class Auth extends Component {
     } 
     return (
       <div className="container">
+        {this.state.isSignUp
+         ? <h3 className="text-center">Sign Up</h3>
+         : <h3 className="text-center">Log In</h3>
+        }
         <div className="row">
-          <div className="col d-flex justify-content-center mt-3">
+          <div className="col d-flex justify-content-center">
             <form className={classes.Auth} onSubmit={(event) => this.onSubmitHandler(event)}>
               <div className='form-group'>
                 {errorMsg}
