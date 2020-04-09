@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import * as actionCreators from '../../store/actions/actionTypes';
 import {Route} from 'react-router-dom';
 import FullApp from './FullApp/FullApp';
+import { findAllByPlaceholderText } from '@testing-library/react';
 
 class Applications extends Component {
   state = {
@@ -38,12 +39,15 @@ class Applications extends Component {
   goHome = () => {
     this.props.history.push('/');
   }
-
   render () {
-    
+        // Reorder by ID number in case data is received out of order
+        var sortedApps = this.props.applications.slice(0);
+        sortedApps.sort(function(a,b) {
+          return (a.id < b.id ? -1: 1);
+        })
     let displayApps = (
       <Aux>
-        {this.props.applications.map((app, index) => {
+        {sortedApps.map((app, index) => {
           let tempDate = app.application.date.toString().slice(0,10);
           let fixedDate = tempDate.substr(5,6) + '-' + tempDate.substr(0,4);
           let isUrl =  app.application.url !== ''; 
@@ -64,6 +68,7 @@ class Applications extends Component {
         })}
       </Aux>
     );
+    
     // if user is auth, show 
     let showApps = null;
     if (this.props.token !== null && !this.props.error) {

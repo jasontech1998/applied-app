@@ -29,8 +29,13 @@ class FullApp extends Component {
 
 
   render () {
+    var sortedApps = this.props.applications.slice(0);
+        sortedApps.sort(function(a,b) {
+          return (a.id < b.id ? -1: 1);
+        })
+
     let appIndex = this.props.match.params.index
-    let chosenApp = this.props.applications[appIndex];
+    let chosenApp = sortedApps[appIndex];
     let isInfo = chosenApp.application.info !== '';
     let isURL = chosenApp.application.url !== '';
     let tempDate = chosenApp.application.date.toString().slice(0,10);
